@@ -37,13 +37,26 @@
  *   https://creativecommons.org/licenses/by-sa/4.0/legalcode
  */
 package com.dariawan.contactapp.repository;
-
+import org.apache.ibatis.annotations.Select;
 import com.dariawan.contactapp.domain.Contact;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface ContactRepository extends PagingAndSortingRepository<Contact, Long>, 
+import java.util.List;
+
+/*contact接口申明，接口类*/
+public interface ContactRepository extends PagingAndSortingRepository<Contact, Long>,
+        /*JPA*/
         JpaSpecificationExecutor<Contact> {
 }
 
+//public interface ContactRepository {
+//
+//    @Select("select * from contact")
+//    List<Contact> findAll();
+//
+//    @Select("select * from contact where id = #{id};")
+//    Contact findById(Long id);
+//
+//}
 

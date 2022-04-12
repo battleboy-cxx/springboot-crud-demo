@@ -52,7 +52,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-/*操作contact对象的方法，提供controller调用*/
+/*操作contact对象的方法，提供controller调用，接口类的实现*/
 @Service
 public class ContactService {
     

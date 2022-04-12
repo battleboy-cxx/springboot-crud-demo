@@ -76,7 +76,6 @@ public class ContactController {
         return "index";
     }
 
-    /**/
     @GetMapping(value = "/contacts")
     public String getContacts(Model model,
             @RequestParam(value = "page", defaultValue = "1") int pageNumber) {
